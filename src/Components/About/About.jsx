@@ -22,8 +22,13 @@ import VSCode from '../../assets/VSCode-Dark.svg';
 function About() {
   return (
     <>
-      <br /><br /><br />
+    <br/><br/><br/><br/>
       <Grid container id="about">
+        <Grid item xs={12}>
+          <div style={{height:'100px'}}>&nbsp;</div>
+        </Grid>
+      </Grid>
+      <Grid container >
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="h2" sx={{ fontWeight: 'bold' }} className="sub1">

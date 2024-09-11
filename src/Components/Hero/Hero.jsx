@@ -10,6 +10,7 @@ import Inst from '../../assets/instagram.png';
 import Hello from '../../assets/Hello.gif';
 import CVimage from '../../assets/CVimage.png';
 import CV from '../../assets/CV.pdf';
+import MyPic from '../../assets/MyPic.jpg'
 import './styles.css';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../Context/ThemeContext';
@@ -78,7 +79,7 @@ function Hero() {
   const downloadCV = () => {
     const pdf = new jsPDF();
     pdf.text('Curriculum Vitae', 10, 10);
-    pdf.save("CV.pdf");
+    pdf.save({ CV });
   };
 
 
@@ -257,6 +258,7 @@ function Hero() {
                 dragConstraints={{ top: -10, left: -10, right: 10, bottom: 10 }}
                 dragElastic={1}
                 dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+                onClick={downloadCV}
               >
                 {/* <Box
                   sx={{
@@ -271,7 +273,7 @@ function Hero() {
                   }}
                 > */}
                 {/* <Typography sx={{ marginTop: '5%', position: 'absolute' }} variant='h6'>CV</Typography> */}
-                <img onClick={downloadCV} src={CVimage} alt="Resume" width="40%" />
+                <img src={CVimage} alt="Resume" width="40%" />
 
                 {/* </Box> */}
               </motion.div>
@@ -327,9 +329,10 @@ function Hero() {
                     overflow: 'hidden',
                     width: '15%'
                   }}
+                  onClick={downloadCV}
                 >
                   {/* <Typography sx={{ marginTop: '5%', position: 'absolute' }} variant='h6'>CV</Typography> */}
-                  <img onClick={downloadCV} src={CVimage} alt="Resume" width="100%" />
+                  <img src={CVimage} alt="Resume" width="100%" />
 
                 </Box>
               </motion.div>
@@ -386,9 +389,10 @@ function Hero() {
                     width: '20%',
                     height: '30%'
                   }}
+                  onClick={downloadCV}
                 >
                   {/* <Typography sx={{ marginTop: '5%', position: 'absolute' }} variant='h6'>CV</Typography> */}
-                  <img onClick={downloadCV} src={CVimage} alt="Resume" width="100%" />
+                  <img src={CVimage} alt="Resume" width="100%" />
 
                 </Box>
               </motion.div>
