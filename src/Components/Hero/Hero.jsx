@@ -10,7 +10,7 @@ import Inst from '../../assets/instagram.png';
 import Hello from '../../assets/Hello.gif';
 import CVimage from '../../assets/CVimage.png';
 import CV from '../../assets/CV.pdf';
-import MyPic from '../../assets/MyPic.jpg'
+// import MyPic from '../../assets/MyPic.jpg'
 import './styles.css';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../Context/ThemeContext';
@@ -77,11 +77,12 @@ function Hero() {
   theme = responsiveFontSizes(theme);
 
   const downloadCV = () => {
-    const pdf = new jsPDF();
-    pdf.text('Curriculum Vitae', 10, 10);
-    pdf.save({ CV });
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'Curriculum Vitae.pdf';
+    link.click();
   };
-
+  
 
   return (
     <>
