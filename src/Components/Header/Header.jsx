@@ -83,28 +83,28 @@ const Header = () => {
             </HashLink>
           </Grid>
         </Grid>
-        <Grid container textAlign='center' justifyContent='center' position='absolute'>
+        <Grid container justifyContent='center' position='absolute'>
           {/* <ThemeProvider theme={theme1}> */}
 
           {/* </ThemeProvider> */}
           <ThemeProvider theme={theme1}>
-            <Grid item xl={1} lg={1.2} md={1.1} sm={1.2} xs={1.2}>
+            <Grid item xl={1} lg={1.2} md={1.1} sm={1.2} xs={1.2} className='navcontent1'>
               <NavHashLink className='navcontent' smooth to="#home">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>HOME</Typography>
               </NavHashLink>
             </Grid>
 
-            <Grid item xl={1.5} lg={1.8} md={1.85} sm={2.25} xs={1.8}>
+            <Grid item xl={1.5} lg={1.8} md={2} sm={2.25} xs={1.8} className='navcontent2'>
               <NavHashLink className='navcontent' smooth to="#about">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>ABOUT&nbsp;&nbsp;ME</Typography>
               </NavHashLink>
             </Grid>
-            <Grid item xl={1.2} lg={1.5} md={1.45} sm={1.7} xs={1.5}>
+            <Grid item xl={1.2} lg={1.5} md={1.65} sm={1.7} xs={1.5} className='navcontent3'>
               <NavHashLink className='navcontent' smooth to="#projects">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>PROJECT</Typography>
               </NavHashLink>
             </Grid>
-            <Grid item xl={1} lg={1} md={1} sm={1.6} xs={1}>
+            <Grid item xl={1} lg={1} md={1} sm={1.6} xs={1} className='navcontent4'>
               <NavHashLink className='navcontent' smooth to="#contact">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>CONTACT</Typography>
               </NavHashLink>

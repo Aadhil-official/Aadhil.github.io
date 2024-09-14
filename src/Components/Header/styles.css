@@ -10,6 +10,318 @@
   text-decoration: none;
 }
 
+.navcontent1 {
+  position: relative;
+}
+
+.navcontent1::before,
+.navcontent1::after {
+  justify-content: center;
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: rgb(0, 165, 165);
+  width: 0px;
+  bottom: 0px;
+  transition: all .5s;
+}
+
+/* for2nd */
+.navcontent2 {
+  position: relative;
+}
+
+.navcontent2::before,
+.navcontent2::after {
+  justify-content: center;
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: rgb(0, 165, 165);
+  width: 0px;
+  bottom: 0px;
+  transition: all .5s;
+}
+
+
+
+/* for 3rd */
+.navcontent3 {
+  position: relative;
+}
+
+.navcontent3::before,
+.navcontent3::after {
+  justify-content: center;
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: rgb(0, 165, 165);
+  width: 0px;
+  bottom: 0px;
+  transition: all .5s;
+}
+
+
+
+/* for 4th */
+
+/* for 3rd */
+.navcontent4 {
+  position: relative;
+}
+
+.navcontent4::before,
+.navcontent4::after {
+  justify-content: center;
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: rgb(0, 165, 165);
+  width: 0px;
+  bottom: 0px;
+  transition: all .5s;
+}
+/* 
+@media(max-width: 1200px),
+(min-width: 1400px) {
+  .navcontent4::before {
+    left: 100%;
+  }
+
+  .navcontent4::after {
+    right: 100%;
+  }
+} */
+
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  /* for 4th */
+  .navcontent4::before {
+    left: 90%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 10%;
+  }
+
+  .navcontent4:hover::before {
+    width: 75%;
+  }
+
+  .navcontent4:hover::after {
+    width: 70%;
+  }
+
+  
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 52%;
+  }
+
+  .navcontent3::after {
+    right: 48%;
+  }
+
+  .navcontent3:hover::before {
+    width: 45%;
+  }
+
+  .navcontent3:hover::after {
+    width: 42%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 52%;
+  }
+
+  .navcontent2::after {
+    right: 48%;
+  }
+
+  .navcontent2:hover::before {
+    width: 42%;
+  }
+
+  .navcontent2:hover::after {
+    width: 43%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 56%;
+  }
+
+  .navcontent1::after {
+    right: 44%;
+  }
+
+  .navcontent1:hover::before {
+    width: 45%;
+  }
+
+  .navcontent1:hover::after {
+    width: 45%;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1450px) {
+  /* for 4th */
+  .navcontent4::before {
+    left: 65%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 35%;
+  }
+
+  .navcontent4:hover::before {
+    width: 63%;
+  }
+
+  .navcontent4:hover::after {
+    width: 65%;
+  }
+
+  
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 45%;
+  }
+
+  .navcontent3::after {
+    right: 55%;
+  }
+
+  .navcontent3:hover::before {
+    width: 50%;
+  }
+
+  .navcontent3:hover::after {
+    width: 50%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 42%;
+  }
+
+  .navcontent2::after {
+    right: 58%;
+  }
+
+  .navcontent2:hover::before {
+    width: 50%;
+  }
+
+  .navcontent2:hover::after {
+    width: 50%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 38%;
+  }
+
+  .navcontent1::after {
+    right: 62%;
+  }
+
+  .navcontent1:hover::before {
+    width: 50%;
+  }
+
+  .navcontent1:hover::after {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 1450px) {
+  .navcontent4::before {
+    left: 57%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 43%;
+  }
+
+  .navcontent4:hover::before {
+    width: 53%;
+  }
+
+  .navcontent4:hover::after {
+    width: 55%;
+  }
+
+
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 45%;
+  }
+
+  .navcontent3::after {
+    right: 55%;
+  }
+
+  .navcontent3:hover::before {
+    width: 45%;
+  }
+
+  .navcontent3:hover::after {
+    width: 45%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 42%;
+  }
+
+  .navcontent2::after {
+    right: 58%;
+  }
+
+  .navcontent2:hover::before {
+    width: 42%;
+  }
+
+  .navcontent2:hover::after {
+    width: 42%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 38%;
+  }
+
+  .navcontent1::after {
+    right: 62%;
+  }
+
+  .navcontent1:hover::before {
+    width: 43%;
+  }
+
+  .navcontent1:hover::after {
+    width: 43%;
+  }
+
+}
+
 /* styles.css */
 /* @media (max-width: 600px) {
   h4 {
