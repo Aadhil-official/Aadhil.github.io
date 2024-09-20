@@ -57,7 +57,7 @@
 /* for 4th */
 
 /* for 3rd */
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
   .navcontent4 {
     position: relative;
   }
@@ -103,9 +103,10 @@
   .scrollbar {
     position: fixed;
     height: 5px;
-    top: 10%;
+    top: 7%;
+    /* z-index: 999; */
     left: 0;
-    width: 100%;
+    width: 0px;
     background-color: rgb(1, 122, 122);
     animation: scroll-progress linear;
     animation-timeline: scroll();
@@ -120,19 +121,19 @@
       width: 100%;
     }
   }
-  
+
 }
 
-@media (min-width: 960px) and (max-width: 1200px) {
+@media (min-width: 960px) and (max-width: 1000px) {
 
   /* for 4th */
   .navcontent4::before {
-    left: 90%;
+    left: 71%;
   }
 
   .navcontent4::after {
     /* right: 0%; */
-    right: 10%;
+    right: 29%;
   }
 
   .navcontent4:hover::before {
@@ -140,18 +141,18 @@
   }
 
   .navcontent4:hover::after {
-    width: 70%;
+    width: 75%;
   }
 
 
   /* for 3rd */
 
   .navcontent3::before {
-    left: 52%;
+    left: 42.5%;
   }
 
   .navcontent3::after {
-    right: 48%;
+    right: 57.5%;
   }
 
   .navcontent3:hover::before {
@@ -159,17 +160,17 @@
   }
 
   .navcontent3:hover::after {
-    width: 42%;
+    width: 45%;
   }
 
   /* for 2nd */
 
   .navcontent2::before {
-    left: 52%;
+    left: 40%;
   }
 
   .navcontent2::after {
-    right: 48%;
+    right: 60%;
   }
 
   .navcontent2:hover::before {
@@ -183,11 +184,322 @@
   /* for 1st */
 
   .navcontent1::before {
-    left: 56%;
+    left: 44.5%;
   }
 
   .navcontent1::after {
-    right: 44%;
+    right: 55.5%;
+  }
+
+  .navcontent1:hover::before {
+    width: 45%;
+  }
+
+  .navcontent1:hover::after {
+    width: 45%;
+  }
+
+}
+
+
+@media (min-width: 1000px) and (max-width: 1050px) {
+
+  /* for 4th */
+  .navcontent4::before {
+    left: 67.5%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 32.5%;
+  }
+
+  .navcontent4:hover::before {
+    width: 75%;
+  }
+
+  .navcontent4:hover::after {
+    width: 75%;
+  }
+
+
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 40%;
+  }
+
+  .navcontent3::after {
+    right: 60%;
+  }
+
+  .navcontent3:hover::before {
+    width: 45%;
+  }
+
+  .navcontent3:hover::after {
+    width: 45%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 37.5%;
+  }
+
+  .navcontent2::after {
+    right: 62.5%;
+  }
+
+  .navcontent2:hover::before {
+    width: 42%;
+  }
+
+  .navcontent2:hover::after {
+    width: 43%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 40%;
+  }
+
+  .navcontent1::after {
+    right: 60%;
+  }
+
+  .navcontent1:hover::before {
+    width: 45%;
+  }
+
+  .navcontent1:hover::after {
+    width: 45%;
+  }
+
+}
+
+
+@media (min-width: 1050px) and (max-width: 1100px) {
+
+  /* for 4th */
+  .navcontent4::before {
+    left: 64.5%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 35.5%;
+  }
+
+  .navcontent4:hover::before {
+    width: 75%;
+  }
+
+  .navcontent4:hover::after {
+    width: 75%;
+  }
+
+
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 38%;
+  }
+
+  .navcontent3::after {
+    right: 62%;
+  }
+
+  .navcontent3:hover::before {
+    width: 45%;
+  }
+
+  .navcontent3:hover::after {
+    width: 45%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 35%;
+  }
+
+  .navcontent2::after {
+    right: 65%;
+  }
+
+  .navcontent2:hover::before {
+    width: 40%;
+  }
+
+  .navcontent2:hover::after {
+    width: 40%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 37.5%;
+  }
+
+  .navcontent1::after {
+    right: 62.5%;
+  }
+
+  .navcontent1:hover::before {
+    width: 45%;
+  }
+
+  .navcontent1:hover::after {
+    width: 45%;
+  }
+
+}
+
+
+@media (min-width: 1100px) and (max-width: 1170px) {
+
+  /* for 4th */
+  .navcontent4::before {
+    left: 62.5%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 37.5%;
+  }
+
+  .navcontent4:hover::before {
+    width: 70%;
+  }
+
+  .navcontent4:hover::after {
+    width: 70%;
+  }
+
+
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 35%;
+  }
+
+  .navcontent3::after {
+    right: 65%;
+  }
+
+  .navcontent3:hover::before {
+    width: 40%;
+  }
+
+  .navcontent3:hover::after {
+    width: 40%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 34%;
+  }
+
+  .navcontent2::after {
+    right: 66%;
+  }
+
+  .navcontent2:hover::before {
+    width: 37%;
+  }
+
+  .navcontent2:hover::after {
+    width: 37%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 36%;
+  }
+
+  .navcontent1::after {
+    right: 64%;
+  }
+
+  .navcontent1:hover::before {
+    width: 45%;
+  }
+
+  .navcontent1:hover::after {
+    width: 45%;
+  }
+
+}
+
+@media (min-width: 1170px) and (max-width: 1200px) {
+
+  /* for 4th */
+  .navcontent4::before {
+    left: 57.5%;
+  }
+
+  .navcontent4::after {
+    /* right: 0%; */
+    right: 42.5%;
+  }
+
+  .navcontent4:hover::before {
+    width: 65%;
+  }
+
+  .navcontent4:hover::after {
+    width: 65%;
+  }
+
+
+  /* for 3rd */
+
+  .navcontent3::before {
+    left: 34%;
+  }
+
+  .navcontent3::after {
+    right: 66%;
+  }
+
+  .navcontent3:hover::before {
+    width: 40%;
+  }
+
+  .navcontent3:hover::after {
+    width: 40%;
+  }
+
+  /* for 2nd */
+
+  .navcontent2::before {
+    left: 31.5%;
+  }
+
+  .navcontent2::after {
+    right: 68.5%;
+  }
+
+  .navcontent2:hover::before {
+    width: 37%;
+  }
+
+  .navcontent2:hover::after {
+    width: 37%;
+  }
+
+  /* for 1st */
+
+  .navcontent1::before {
+    left: 35%;
+  }
+
+  .navcontent1::after {
+    right: 65%;
   }
 
   .navcontent1:hover::before {
@@ -204,75 +516,75 @@
 
   /* for 4th */
   .navcontent4::before {
-    left: 75%;
+    left: 56.5%;
   }
 
   .navcontent4::after {
     /* right: 0%; */
-    right: 25%;
+    right: 43.5%;
   }
 
   .navcontent4:hover::before {
-    width: 63%;
+    width: 60%;
   }
 
   .navcontent4:hover::after {
-    width: 65%;
+    width: 60%;
   }
 
 
   /* for 3rd */
 
   .navcontent3::before {
-    left: 48%;
+    left: 36.5%;
   }
 
   .navcontent3::after {
-    right: 52%;
+    right: 63.5%;
   }
 
   .navcontent3:hover::before {
-    width: 50%;
+    width: 40%;
   }
 
   .navcontent3:hover::after {
-    width: 50%;
+    width: 40%;
   }
 
   /* for 2nd */
 
   .navcontent2::before {
-    left: 47%;
+    left: 35%;
   }
 
   .navcontent2::after {
-    right: 53%;
+    right: 65%;
   }
 
   .navcontent2:hover::before {
-    width: 48%;
+    width: 40%;
   }
 
   .navcontent2:hover::after {
-    width: 48%;
+    width: 40%;
   }
 
   /* for 1st */
 
   .navcontent1::before {
-    left: 42.5%;
+    left: 31%;
   }
 
   .navcontent1::after {
-    right: 57.5%;
+    right: 69%;
   }
 
   .navcontent1:hover::before {
-    width: 47.5%;
+    width: 40%;
   }
 
   .navcontent1:hover::after {
-    width: 47.5%;
+    width: 40%;
   }
 
 }
@@ -282,75 +594,75 @@
 
   /* for 4th */
   .navcontent4::before {
-    left: 72.5%;
+    left: 53%;
   }
 
   .navcontent4::after {
     /* right: 0%; */
-    right: 27.5%;
+    right: 47%;
   }
 
   .navcontent4:hover::before {
-    width: 63%;
+    width: 60%;
   }
 
   .navcontent4:hover::after {
-    width: 65%;
+    width: 60%;
   }
 
 
   /* for 3rd */
 
   .navcontent3::before {
-    left: 46.5%;
+    left: 34%;
   }
 
   .navcontent3::after {
-    right: 53.5%;
+    right: 66%;
   }
 
   .navcontent3:hover::before {
-    width: 45%;
+    width: 35%;
   }
 
   .navcontent3:hover::after {
-    width: 45%;
+    width: 35%;
   }
 
   /* for 2nd */
 
   .navcontent2::before {
-    left: 44.5%;
+    left: 33%;
   }
 
   .navcontent2::after {
-    right: 55.5%;
+    right: 67%;
   }
 
   .navcontent2:hover::before {
-    width: 45.5%;
+    width: 38%;
   }
 
   .navcontent2:hover::after {
-    width: 45.5%;
+    width: 38%;
   }
 
   /* for 1st */
 
   .navcontent1::before {
-    left: 41%;
+    left: 28.5%;
   }
 
   .navcontent1::after {
-    right: 58.5%;
+    right: 71.5%;
   }
 
   .navcontent1:hover::before {
-    width: 47%;
+    width: 38%;
   }
 
   .navcontent1:hover::after {
-    width: 47%;
+    width: 38%;
   }
 
 }
@@ -360,165 +672,165 @@
 
   /* for 4th */
   .navcontent4::before {
-    left: 65%;
+    left: 51%;
   }
 
   .navcontent4::after {
     /* right: 0%; */
-    right: 35%;
+    right: 49%;
   }
 
   .navcontent4:hover::before {
-    width: 63%;
+    width: 55%;
   }
 
   .navcontent4:hover::after {
-    width: 65%;
+    width: 55%;
   }
 
 
   /* for 3rd */
 
   .navcontent3::before {
-    left: 41%;
+    left: 33%;
   }
 
   .navcontent3::after {
-    right: 59%;
+    right: 67%;
   }
 
   .navcontent3:hover::before {
-    width: 45%;
+    width: 40%;
   }
 
   .navcontent3:hover::after {
-    width: 45%;
+    width: 40%;
   }
 
   /* for 2nd */
 
   .navcontent2::before {
-    left: 42%;
+    left: 31.5%;
   }
 
   .navcontent2::after {
-    right: 58%;
+    right: 68.5%;
   }
 
   .navcontent2:hover::before {
-    width: 50%;
+    width: 37%;
   }
 
   .navcontent2:hover::after {
-    width: 50%;
+    width: 37%;
   }
 
   /* for 1st */
 
   .navcontent1::before {
-    left: 37%;
+    left: 27%;
   }
 
   .navcontent1::after {
-    right: 63%;
+    right: 73%;
   }
 
   .navcontent1:hover::before {
-    width: 38%;
+    width: 35%;
   }
 
   .navcontent1:hover::after {
-    width: 38%;
+    width: 35%;
   }
 
 }
 
 
-@media (min-width: 1375px) and (max-width: 1450px) {
+@media (min-width: 1375px) and (max-width: 1440px) {
 
   /* for 4th */
   .navcontent4::before {
-    left: 63%;
+    left: 49.5%;
   }
 
   .navcontent4::after {
     /* right: 0%; */
-    right: 37%;
+    right: 50.5%;
   }
 
   .navcontent4:hover::before {
-    width: 59%;
+    width: 55%;
   }
 
   .navcontent4:hover::after {
-    width: 59%;
+    width: 55%;
   }
 
 
   /* for 3rd */
 
   .navcontent3::before {
-    left: 48%;
+    left: 31%;
   }
 
   .navcontent3::after {
-    right: 52%;
+    right: 69%;
   }
 
   .navcontent3:hover::before {
-    width: 50%;
+    width: 40%;
   }
 
   .navcontent3:hover::after {
-    width: 50%;
+    width: 40%;
   }
 
   /* for 2nd */
 
   .navcontent2::before {
-    left: 47%;
+    left: 30%;
   }
 
   .navcontent2::after {
-    right: 53%;
+    right: 70%;
   }
 
   .navcontent2:hover::before {
-    width: 48%;
+    width: 38%;
   }
 
   .navcontent2:hover::after {
-    width: 48%;
+    width: 38%;
   }
 
   /* for 1st */
 
   .navcontent1::before {
-    left: 42.5%;
+    left: 27%;
   }
 
   .navcontent1::after {
-    right: 57.5%;
+    right: 73%;
   }
 
   .navcontent1:hover::before {
-    width: 47.5%;
+    width: 40%;
   }
 
   .navcontent1:hover::after {
-    width: 47.5%;
+    width: 40%;
   }
 
 }
+/* 
 
-
-@media (min-width: 1450px) and (max-width: 1500px) {
+@media (min-width: 1450px) and (max-width: 1440px) {
   .navcontent4::before {
     left: 61%;
   }
 
   .navcontent4::after {
-    /* right: 0%; */
+    right: 0%;
     right: 39%;
   }
 
@@ -531,7 +843,7 @@
   }
 
 
-  /* for 3rd */
+  for 3rd
 
   .navcontent3::before {
     left: 40%;
@@ -549,7 +861,7 @@
     width: 40%;
   }
 
-  /* for 2nd */
+  for 2nd
 
   .navcontent2::before {
     left: 38.5%;
@@ -567,7 +879,7 @@
     width: 40%;
   }
 
-  /* for 1st */
+  for 1st
 
   .navcontent1::before {
     left: 34%;
@@ -585,7 +897,7 @@
     width: 39%;
   }
 
-}
+} */
 
 /* styles.css */
 /* @media (max-width: 600px) {
@@ -607,7 +919,7 @@
 } */
 
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
 
   /* .navcontent4::before,
   .navcontent3::before,
@@ -638,12 +950,13 @@
   .scrollbar {
     position: fixed;
     height: 5px;
-    top: 9.5%;
+    top: 7%;
     left: 0;
-    width: 100%;
+    width: 0px;
     background-color: rgb(0, 165, 165);
     animation: scroll-progress linear;
     animation-timeline: scroll();
+    /* z-index: 99; */
   }
 
   @keyframes scroll-progress {
