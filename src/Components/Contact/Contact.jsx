@@ -34,7 +34,7 @@ export function Contact() {
         {isMdOrLarger ? (
           <>
             <Grid item xl={3.6} lg={4.2} md={4.5} className="mycon">
-              <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com?subject=Hello%20Aadhil&body=I%20would%20like%20to%20discuss...">
+              <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com?body=I%20would%20like%20to%20discuss">
                 <img src={emailIcon} alt="Email" />
                 <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
                   mohamedaadhil2446504@gmail.com
