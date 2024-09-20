@@ -128,6 +128,7 @@ const Header = () => {
         </Grid>
         {/* </Toolbar> */}
       </AppBar>
+      <div className='scrollbar'></div>
     </>
   );
 }

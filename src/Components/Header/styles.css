@@ -99,6 +99,29 @@
   }
 } */
 
+@media (max-width: 960px) {
+  .scrollbar {
+    position: fixed;
+    height: 5px;
+    top: 9.4%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(1, 122, 122);
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-progress {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+  
+}
 
 @media (min-width: 960px) and (max-width: 1200px) {
 
@@ -586,7 +609,7 @@
 
 @media (min-width: 1500px) {
 
-  .navcontent4::before,
+  /* .navcontent4::before,
   .navcontent3::before,
   .navcontent2::before,
   .navcontent1::before {
@@ -599,9 +622,9 @@
   .navcontent2::after,
   .navcontent1::after {
     right: 50%;
-  }
+  } */
 
-  .navcontent4:hover::before,
+  /* .navcontent4:hover::before,
   .navcontent4:hover::after,
   .navcontent3:hover::before,
   .navcontent3:hover::after,
@@ -609,6 +632,27 @@
   .navcontent2:hover::after,
   .navcontent1:hover::before,
   .navcontent1:hover::after {
-    width: 51%;
+    width: 150px;
+  } */
+
+  .scrollbar {
+    position: fixed;
+    height: 5px;
+    top: 9.5%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 165, 165);
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-progress {
+    from {
+      width: 0px;
+    }
+
+    to {
+      width: 100%;
+    }
   }
 }
