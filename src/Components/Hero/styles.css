@@ -1,4 +1,7 @@
-/* styles.css */
+.homeset {
+  margin-top: -100px;
+}
+
 .sideIcon {
   z-index: 1000;
   border-radius: 30px;
@@ -17,7 +20,7 @@
 }
 
 @media(max-width: 768px) {
-  .sideIcon{
+  .sideIcon {
     display: none;
   }
 }

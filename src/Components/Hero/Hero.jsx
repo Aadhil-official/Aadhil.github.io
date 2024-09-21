@@ -82,12 +82,16 @@ function Hero() {
     link.download = 'Curriculum Vitae.pdf';
     link.click();
   };
-  
+
 
   return (
     <>
       <Grid container id="home">
-
+        <Grid item xs={12}>
+          <div style={{ height: '100px' }}>&nbsp;</div>
+        </Grid>
+      </Grid>
+      <Grid container className='homeset'>
         {/* <motion.div
           variants={avatarVariants}
           initial="hidden"
