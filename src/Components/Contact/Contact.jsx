@@ -4,12 +4,15 @@ import emailIcon from "../../assets/email.png";
 import Phoneicon from "../../assets/phone-icon.png"
 import ConForm from "../ConForm/ConForm";
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
-
+// import styled from "styled-components";
 
 export function Contact() {
 
   const theme = useTheme();
-  const isMdOrLarger = useMediaQuery(theme.breakpoints.up('md'));
+  const isMd = useMediaQuery(theme.breakpoints.up('md'));
+  const isLgOrXl = useMediaQuery(theme.breakpoints.up('lg'));
+  // const isSmOrXs = useMediaQuery(theme.breakpoints.up('xs'));
+  // const isMd = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <>
@@ -31,13 +34,13 @@ export function Contact() {
           </Typography><br />
         </Grid>
 
-        {isMdOrLarger ? (
+        {isLgOrXl && (
           <>
             <Grid item xl={3.6} lg={4.2} md={4.5} className="mycon">
               <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com">
-              {/* ?body=I%20would%20like%20to%20discuss */}
+                {/* ?body=I%20would%20like%20to%20discuss */}
                 <img src={emailIcon} alt="Email" />
-                <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
+                <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
                   mohamedaadhil2446504@gmail.com
                 </Typography>
               </Link>
@@ -46,18 +49,43 @@ export function Contact() {
             <Grid item xl={3.5} lg={4.2} md={4.5} className="mycon">
               <Link className="contactcon" to="tel:+94750213273">
                 <img src={Phoneicon} alt="Phone no" />&nbsp;&nbsp;&nbsp;&nbsp;
-                <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
+                <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
                   (+94) 750213273
                 </Typography>
               </Link>
             </Grid>
-          </>
-        ) : (
+          </>)
+        }
+
+        {!isLgOrXl && isMd && (
+          <>
+            <Grid item md={4.8} className="mycon">
+              <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com">
+                {/* ?body=I%20would%20like%20to%20discuss */}
+                <img src={emailIcon} alt="Email" />
+                <Typography variant="body2" sx={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
+                  mohamedaadhil2446504@gmail.com
+                </Typography>
+              </Link>
+            </Grid>
+            <Grid item md={0.5}></Grid>
+            <Grid item md={4.8} className="mycon">
+              <Link className="contactcon" to="tel:+94750213273">
+                <img src={Phoneicon} alt="Phone no" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <Typography variant="body2" sx={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
+                  (+94) 750213273
+                </Typography>
+              </Link>
+            </Grid>
+          </>)
+        }
+
+        {!isMd && (
           <>
             <Grid item sm={8} xs={9.5} className="mycon">
               <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com?subject=Hello%20Aadhil&body=I%20would%20like%20to%20discuss...">
                 <img src={emailIcon} alt="Email" />
-                <Typography variant="h6" sx={{ fontSize: '0.7rem' }} >
+                <Typography variant="body1" sx={{ fontSize: '0.7rem', fontWeight: 'bold' }} >
                   mohamedaadhil2446504@gmail.com
                 </Typography>
               </Link>
@@ -67,7 +95,7 @@ export function Contact() {
             <Grid item sm={8} xs={9.5} className="mycon">
               <Link className="contactcon" to="tel:+94750213273">
                 <img src={Phoneicon} alt="Phone no" />
-                <Typography variant="body1" sx={{ fontSize: '0.7rem' }}>
+                <Typography variant="body1" sx={{ fontSize: '0.7rem', fontWeight: 'bold' }}>
                   (+94) 750213273
                 </Typography>
               </Link>

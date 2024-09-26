@@ -48,7 +48,7 @@ const Footer = () => {
           <Grid item xl={4} lg={4} md={2.45} sm={4.21} xs={4}>
             <ThemeProvider theme={theme}>
               <Typography variant='body2' sx={{ marginTop: 1.9, fontSize: '0.5rem', color: isDarkMode ? 'white' : 'black' }}>
-                This Website was made with
+                &copy;This Website was made with
               </Typography>
             </ThemeProvider>
           </Grid>}
