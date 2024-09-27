@@ -28,9 +28,12 @@ function ConForm() {
     }
 
     const onChange = (token) => {
-        setIsRobot(!!token);
+        if (token) {
+            setIsRobot(true);
+        }
     };
 
+    
     const sendEmail = (e) => {
         const loadingToast = showLoading("Sending email...");
 
@@ -42,32 +45,32 @@ function ConForm() {
 
         const result = validateForm.safeParse(data);
         if (result.success && isRobot) {
-            
+
             if (!isRobot) {
                 dismiss(loadingToast);
-                error("Make sure to complete the ReCAPTCHA verification...!");
-                return;
+                error('Make sure to complete the ReCAPTCHA verification...!');
+            } else {
+
+                e.preventDefault();
+
+                emailjs
+                    .sendForm('service_ddrrakr', 'template_who3p09', form.current, {
+                        publicKey: 'QDLQ7f9CtTAS1Jhz1',
+                    })
+                    .then(
+                        () => {
+                            dismiss(loadingToast);
+                            // console.log('SEND SUCCESSFULLY..!');
+                            success("Send message successful!");
+                            resetAll();
+                        },
+                        (error) => {
+                            dismiss(loadingToast);
+                            error("Server error");
+                            // console.log('FAILED...', error.text);
+                        },
+                    );
             }
-
-            e.preventDefault();
-
-            emailjs
-                .sendForm('service_ddrrakr', 'template_who3p09', form.current, {
-                    publicKey: 'QDLQ7f9CtTAS1Jhz1',
-                })
-                .then(
-                    () => {
-                        dismiss(loadingToast);
-                        // console.log('SEND SUCCESSFULLY..!');
-                        success("Send message successful!");
-                        resetAll();
-                    },
-                    (error) => {
-                        dismiss(loadingToast);
-                        error("Server error");
-                        // console.log('FAILED...', error.text);
-                    },
-                );
         } else {
             dismiss(loadingToast);
             const formattedError = result.error.format();
