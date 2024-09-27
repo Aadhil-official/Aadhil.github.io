@@ -42,6 +42,13 @@ function ConForm() {
 
         const result = validateForm.safeParse(data);
         if (result.success && isRobot) {
+            
+            if (!isRobot) {
+                dismiss(loadingToast);
+                error("Make sure to complete the ReCAPTCHA verification...!");
+                return;
+            }
+
             e.preventDefault();
 
             emailjs
@@ -136,18 +143,18 @@ function ConForm() {
             /> */}
             {/* <center> */}
             {/* <center> */}
-                <ThemeProvider theme={theme}>
-                    <Grid container justifyContent='center'>
-                        <Grid item xl={5} lg={5} md={5} sm={12} xs={12} textAlign='left'>
-                            <Box sx={{
-                                marginBottom:'20px'
-                                // width: '10%'
-                                // border:'1px solid rgb(71, 136, 158)'
-                                // backgroundColor: 'rgb(71, 136, 158)',
-                                // '&:hover': {
-                                //     backgroundColor: 'rgba(71, 136, 158, 0.8)',
-                                // }
-                            }}>
+            <ThemeProvider theme={theme}>
+                <Grid container justifyContent='center'>
+                    <Grid item xl={5} lg={5} md={5} sm={12} xs={12} textAlign='left'>
+                        <Box sx={{
+                            marginBottom: '20px'
+                            // width: '10%'
+                            // border:'1px solid rgb(71, 136, 158)'
+                            // backgroundColor: 'rgb(71, 136, 158)',
+                            // '&:hover': {
+                            //     backgroundColor: 'rgba(71, 136, 158, 0.8)',
+                            // }
+                        }}>
                             <center>
                                 <ReCAPTCHA
                                     key={isDarkMode ? "dark" : "light"}
@@ -158,28 +165,28 @@ function ConForm() {
                                     aria-label="Verify before sending the message"
                                 />
                             </center>
-                            </Box>
-                        </Grid>
-                        <Grid item xl={2} lg={2} md={2} sm={12} xs={12}></Grid>
-                        <Grid item xl={5} lg={5} md={5} sm={12} xs={12} textAlign='right'>
-                            <Button
-                                variant='contained'
-                                type='submit'
-                                size='large'
-                                sx={{
-                                    width: '100%',
-                                    height: '75%',
-                                    backgroundColor: 'rgb(71, 136, 158)',
-                                    '&:hover': {
-                                        backgroundColor: 'rgba(71, 136, 158, 0.8)',
-                                    }
-                                }}
-                            >
-                                <Typography variant='h6'>Send</Typography>
-                            </Button>
-                        </Grid>
+                        </Box>
                     </Grid>
-                </ThemeProvider>
+                    <Grid item xl={2} lg={2} md={2} sm={12} xs={12}></Grid>
+                    <Grid item xl={5} lg={5} md={5} sm={12} xs={12} textAlign='right'>
+                        <Button
+                            variant='contained'
+                            type='submit'
+                            size='large'
+                            sx={{
+                                width: '100%',
+                                height: '75%',
+                                backgroundColor: 'rgb(71, 136, 158)',
+                                '&:hover': {
+                                    backgroundColor: 'rgba(71, 136, 158, 0.8)',
+                                }
+                            }}
+                        >
+                            <Typography variant='h6'>Send</Typography>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </ThemeProvider>
             {/* </center> */}
             <br /><br />
         </Box>

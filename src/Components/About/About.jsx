@@ -46,7 +46,7 @@ function About() {
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-              Whenever possible, I also apply my passion for developing products with Sringboot and Modern
+              Whenever possible, I also apply my passion for developing products with Springboot and Modern
               Javascript Library and Framework React.js
               .Also I have done CMS systems with React.js and spring boot.
             </Typography>
