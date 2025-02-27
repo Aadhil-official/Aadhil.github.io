@@ -18,6 +18,9 @@ import CLion from '../../assets/CLion-Dark.svg';
 import Postman from '../../assets/Postman.svg';
 import Linux from '../../assets/Linux-Dark.svg';
 import VSCode from '../../assets/VSCode-Dark.svg';
+import PostgresSQL from '../../assets/postgresSQL.png'
+import Docker from '../../assets/docker.png'
+import Firebase from '../../assets/firebase.svg'
 
 function About() {
   return (
@@ -39,23 +42,19 @@ function About() {
         <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="contentxs">
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-              Hi there! I'm Aadhil, a website developer with a passion for creating custom websites.
-              With a skill set including HTML, CSS, JavaScript, and React,
-              I have the tools to bring any website vision to life.
+            Hi there! I'm Aadhil, a Full-Stack developer with a deep passion for creating high-performance, user-centric websites and mobile applications. I have expertise in building scalable, responsive front-end interfaces using HTML, CSS, JavaScript, and React.js, ensuring an optimized user experience across various platforms. In addition to web development, I specialize in mobile application development with React Native, ensuring seamless functionality and performance on both iOS and Android platforms.
             </Typography>
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-              Whenever possible, I also apply my passion for developing products with Springboot and Modern
-              Javascript Library and Framework React.js
-              .Also I have done CMS systems with React.js and spring boot.
+            As a proficient backend developer, I leverage Spring Boot to build secure, maintainable, and efficient RESTful APIs that integrate seamlessly with modern web and mobile applications. My expertise extends to designing and implementing databases with MySQL, ensuring data consistency and integrity. I also focus on security best practices by incorporating JWT for authentication and authorization, enabling secure access control. For real-time data management, I utilize Firebase, and I integrate SMTP for email notifications, ensuring a fully integrated system. I’ve also developed custom CMS solutions, utilizing modern software engineering principles to deliver clean, modular, and extensible codebases for both web and mobile platforms.
             </Typography>
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-              So if you're in need of a new website or just looking to revamp your current online presence,
+              So if you're in need of a new website or mobile application or just looking to revamp your current online presence,
               I'd love to chat and see how I can help.
-              Let's bring your website dreams to reality together!
+              Let's bring your website and mobile app dreams to reality together!
             </Typography>
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
@@ -66,7 +65,7 @@ function About() {
 
 
           <Grid container spacing={2} className="hability">
-            {[Htmlicon, Cssicon, Springbooticon, Reacticon, CLang, Boostrapicon, AWS, VSCode, CLion, JSicon, Linux, Postman, Blender, Bootstrap, Viteicon].map((icon, index) => (
+            {[Htmlicon, Cssicon, Springbooticon, Reacticon, CLang, Boostrapicon, AWS, Firebase, VSCode, CLion, JSicon, Linux, Postman, Blender, Bootstrap, Viteicon, PostgresSQL, Docker].map((icon, index) => (
               <><Grid></Grid>
                 <Grid item xs={3.6} sm={2.7} md={1.8} key={index} className="hability">
                   <ScrollAnimation animateIn="fadeInUp" delay={(0.10 + index * 0.02) * 1000}>
