@@ -524,6 +524,11 @@ function App() {
         <a href="#about" className="skip-link">Skip to content</a>
         <header className="site-header" role="banner">
           <div className="nav-wrap container">
+            <a className="nav-logo" href="#top">
+              <span className="pulse-dot" />
+              <span>Mohamed <strong>Aadhil</strong></span>
+            </a>
+
             <nav className="desktop-nav" aria-label="Primary">
               {navLinks.map(l => (
                 <a key={l.href} href={l.href}>{l.label}</a>
