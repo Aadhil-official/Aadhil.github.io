@@ -630,7 +630,7 @@ function App() {
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="photo-card">
-                <div className="photo-card__glow" />
+                {/* <div className="photo-card__glow" /> */}
                 <img src={profilePhoto} alt="Mohamed Aadhil" className="photo-img" />
                 {/* <div className="photo-badge photo-badge--tl">
                   <span className="live-dot" />
@@ -943,7 +943,7 @@ function App() {
         {/* ══ FOOTER MARQUEE ══ */}
         <div className="footer-band">
           <div className="marquee-inner marquee-slow">
-            {Array(10).fill('CLEAN CODE').map((t, i) => (
+            {['INNOVATION', 'SCALABLE ARCHITECTURE', 'AI & RAG SOLUTIONS', 'CLEAN CODE', 'FULL-STACK ENGINEERING', 'USER-CENTRIC DESIGN', 'INNOVATION', 'SCALABLE ARCHITECTURE', 'AI & RAG SOLUTIONS', 'CLEAN CODE', 'FULL-STACK ENGINEERING', 'USER-CENTRIC DESIGN'].map((t, i) => (
               <span key={i} className="marquee-item">{t} <span className="mdot">◇</span> </span>
             ))}
           </div>

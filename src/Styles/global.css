@@ -647,7 +647,8 @@ img {
   justify-content: center;
   width: 2.55rem;
   height: 2.55rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-hov);
+  /* Make edge slightly more distinct */
   border-radius: 50%;
   background: var(--bg-card);
   color: var(--text-soft);
@@ -676,7 +677,7 @@ img {
 
 .photo-card {
   position: relative;
-  width: min(100%, 340px);
+  width: min(100%, 360px);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(220, 38, 38, 0.2);
   background: linear-gradient(170deg, rgba(220, 38, 38, 0.14) 0%, rgba(255, 255, 255, 0.04) 100%);
@@ -699,9 +700,11 @@ img {
   width: 100%;
   aspect-ratio: 3/4.2;
   object-fit: cover;
-  object-position: top center;
+  object-position: bottom center;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
   display: block;
+  transform: scale(1.18);
+  transform-origin: bottom center;
 }
 
 .photo-badge {
@@ -822,7 +825,7 @@ img {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-soft);
 }
 
 .mdot {
@@ -1548,7 +1551,7 @@ img {
 }
 
 .footer-socials a {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   width: 2.3rem;
@@ -1672,6 +1675,11 @@ img {
 
   .hero-right {
     align-items: center;
+    margin-top: 2.5rem;
+  }
+
+  .photo-card {
+    display: none;
   }
 
   .about-grid {
@@ -1749,7 +1757,7 @@ img {
   }
 
   .hero-name-big {
-    font-size: clamp(3rem, 15vw, 5rem);
+    font-size: clamp(2.5rem, 12.5vw, 4rem);
   }
 
   .scroll-to-top {
