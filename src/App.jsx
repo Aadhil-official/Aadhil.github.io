@@ -364,7 +364,7 @@ function TypingTitle() {
 }
 
 // ── Counter ───────────────────────────────────────────────────────────────────
-function CountUp({ end, suffix = '' }) {
+function CountUp({ end, suffix = '', decimals = 0 }) {
   const [val, setVal] = useState(0);
   const ref = useRef(null);
   const started = useRef(false);
@@ -376,14 +376,14 @@ function CountUp({ end, suffix = '' }) {
         const step = end / 80;
         const t = setInterval(() => {
           current = Math.min(current + step, end);
-          setVal(Math.round(current));
+          setVal(decimals === 0 ? Math.round(current) : current.toFixed(decimals));
           if (current >= end) clearInterval(t);
         }, 20);
       }
     }, { threshold: 0.5 });
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
-  }, [end]);
+  }, [end, decimals]);
   return <span ref={ref}>{val}{suffix}</span>;
 }
 
@@ -520,10 +520,10 @@ function App() {
         {/* ══ NAVBAR ══ */}
         <header className="site-header">
           <div className="nav-wrap container">
-            <a className="nav-logo" href="#top">
+            {/* <a className="nav-logo" href="#top">
               <span className="pulse-dot" />
-              {/* <span>Mohamed <strong>Aadhil</strong></span> */}
-            </a>
+              <span>Mohamed <strong>Aadhil</strong></span>
+            </a> */}
 
             <nav className="desktop-nav" aria-label="Primary">
               {navLinks.slice(0, 6).map(l => (
@@ -691,10 +691,10 @@ function App() {
                   {[
                     { n: 6, s: '+', label: 'Projects Completed' },
                     { n: 5, s: '+', label: 'Months Experience' },
-                    { n: 345, s: '', label: 'CGPA (×100)' },
-                  ].map(({ n, s, label }) => (
+                    { n: 3.45, s: '', label: 'CGPA', decimals: 2 },
+                  ].map(({ n, s, label, decimals }) => (
                     <div key={label} className="count-card">
-                      <strong><CountUp end={n} suffix={s} /></strong>
+                      <strong><CountUp end={n} suffix={s} decimals={decimals} /></strong>
                       <span>{label}</span>
                     </div>
                   ))}
