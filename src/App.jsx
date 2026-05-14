@@ -523,9 +523,9 @@ function App() {
     const toast = showLoading('Sending message…');
     setIsSubmitting(true);
     try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_ddrrakr';
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_who3p09';
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'QDLQ7f9CtTAS1Jhz1';
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       await emailjs.sendForm(serviceId, templateId, formRef.current, { publicKey });
       dismiss(toast);
       success('Message sent! I\'ll get back to you soon.');
