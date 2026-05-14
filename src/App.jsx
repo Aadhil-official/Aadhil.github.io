@@ -98,7 +98,7 @@ const education = [
     degree: 'G.C.E Advanced Level – Physical Science Stream',
     school: 'Baduriya National School',
     period: '2018 – 2020',
-    desc: 'Chemistry: A · Mathematics: B · Physics: C',
+    desc: 'Strong foundation in mathematics and physical sciences, demonstrating analytical thinking, problem-solving skills, and a logical approach to complex challenges.',
     tags: ['Chemistry: A', 'Mathematics: B', 'Physics: C'],
   },
 ];
@@ -150,7 +150,31 @@ const projects = [
     badgeColor: '#f43f5e',
     desc: 'ESP32-based controller for configurable P10 LED text displays supporting Wi-Fi, Ethernet, SD card inputs, and adjustable font/speed settings.',
     stack: ['ESP32', 'C', 'EasyEDA', 'Proteus', 'Blender'],
-    href: 'https://github.com/Aadhil-official',
+    href: '',
+  },
+  {
+    title: 'StudyHub',
+    badge: 'Individual',
+    badgeColor: '#8b5cf6',
+    desc: 'Developing a web application featuring an interactive video conference setup (similar to Zoom with YouTube), supporting screen/video sharing and live chat options for students and teachers.',
+    stack: ['Next.js', 'MongoDB', 'Tailwind CSS', 'Google Cloud'],
+    href: 'https://github.com/Aadhil-official/StudyHub',
+  },
+  {
+    title: 'Agencypro',
+    badge: 'Contract',
+    badgeColor: '#14b8a6',
+    desc: 'Developing a responsive website and an internal management system equipped with tools designed to effectively oversee and manage stakeholders.',
+    stack: ['Next.js', 'MySQL', 'Tailwind CSS'],
+    href: 'https://github.com/Aadhil-official/agencypro',
+  },
+  {
+    title: 'E Commerce Application',
+    badge: 'Team Project',
+    badgeColor: '#f97316',
+    desc: 'Led a team to design and implement a dynamic sitemap improving navigation, scalability, and SEO performance. Managed workflow planning, task delegation, and comprehensive system handover documentation.',
+    stack: ['Next.js', 'Slack'],
+    href: 'https://samwoohub.lk/',
   },
 ];
 
@@ -605,7 +629,7 @@ function App() {
               </div>
 
               <p className="hero-bio">
-                Final-year IT undergraduate at University of Moratuwa, Sri Lanka. Building scalable applications with <strong>Spring Boot, React, Next.js</strong> and integrating <strong>AI/ML</strong> solutions. Currently interning at DigitalBee Labs.
+                Final-year IT undergraduate at University of Moratuwa, Sri Lanka. Building scalable applications with <strong>Spring Boot, React, Next.js</strong> and integrating <strong>AI/ML</strong> solutions. I have completed my internship at DigitalBee Labs.
               </p>
 
               <div className="hero-actions">
@@ -874,9 +898,9 @@ function App() {
                 <motion.article key={p.title} className="proj-card" {...staggerItem(i)}>
                   <div className="proj-card__top">
                     <span className="proj-badge" style={{ '--badge-color': p.badgeColor }}>{p.badge}</span>
-                    <a href={p.href} target="_blank" rel="noreferrer" className="proj-link" aria-label="Open repository">
+                    {p.href !== '' && <a href={p.href} target="_blank" rel="noreferrer" className="proj-link" aria-label="Open repository">
                       <Icons.ExternalLink />
-                    </a>
+                    </a>}
                   </div>
                   <h3>{p.title}</h3>
                   <p>{p.desc}</p>
