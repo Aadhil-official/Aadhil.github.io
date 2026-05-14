@@ -6,9 +6,9 @@ import { Toaster } from 'react-hot-toast';
 import * as THREE from 'three';
 import profilePhoto from './assets/MyPic.png';
 import cvFile from './assets/CV.pdf';
-import { dismiss, error as showError, loading as showLoading, success } from './utils/Toastify';
-import { useTheme } from './Context/ThemeContext';
-import './Styles/global.css';
+import { dismiss, error as showError, loading as showLoading, success } from './utils/toastify';
+import { useTheme } from './context/ThemeContext';
+import './styles/global.css';
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 const personal = {
@@ -499,7 +499,10 @@ function App() {
     const toast = showLoading('Sending message…');
     setIsSubmitting(true);
     try {
-      await emailjs.sendForm('service_ddrrakr', 'template_who3p09', formRef.current, { publicKey: 'QDLQ7f9CtTAS1Jhz1' });
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_ddrrakr';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_who3p09';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'QDLQ7f9CtTAS1Jhz1';
+      await emailjs.sendForm(serviceId, templateId, formRef.current, { publicKey });
       dismiss(toast);
       success('Message sent! I\'ll get back to you soon.');
       setFormState({ user_name: '', user_email: '', message: '' });
@@ -518,15 +521,11 @@ function App() {
         <ScrollToTopButton />
 
         {/* ══ NAVBAR ══ */}
-        <header className="site-header">
+        <a href="#about" className="skip-link">Skip to content</a>
+        <header className="site-header" role="banner">
           <div className="nav-wrap container">
-            {/* <a className="nav-logo" href="#top">
-              <span className="pulse-dot" />
-              <span>Mohamed <strong>Aadhil</strong></span>
-            </a> */}
-
             <nav className="desktop-nav" aria-label="Primary">
-              {navLinks.slice(0, 6).map(l => (
+              {navLinks.map(l => (
                 <a key={l.href} href={l.href}>{l.label}</a>
               ))}
             </nav>
@@ -535,36 +534,40 @@ function App() {
               <button
                 className="theme-btn"
                 onClick={toggle}
-                aria-label="Toggle theme"
+                aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
                 title={isDark ? 'Light mode' : 'Dark mode'}
               >
-                <span className="theme-btn__track">
-                  <span className="theme-btn__thumb" />
-                </span>
                 {isDark ? <Icons.Sun /> : <Icons.Moon />}
               </button>
-              <a className="btn-talk" href="#contact">Let&apos;s Talk <Icons.Arrow /></a>
-              <button className="burger" aria-label="Menu" onClick={() => setMenuOpen(v => !v)}>
-                <span className={menuOpen ? 'x' : ''} /><span className={menuOpen ? 'x' : ''} /><span className={menuOpen ? 'x' : ''} />
+              <button
+                className={`burger${menuOpen ? ' is-open' : ''}`}
+                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-nav"
+                onClick={() => setMenuOpen(v => !v)}
+              >
+                <span /><span /><span />
               </button>
             </div>
-          </div>
 
-          <AnimatePresence>
-            {menuOpen && (
-              <motion.nav
-                className="mobile-nav"
-                initial={{ opacity: 0, y: -16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.22 }}
-              >
-                {navLinks.map(l => (
-                  <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</a>
-                ))}
-              </motion.nav>
-            )}
-          </AnimatePresence>
+            <AnimatePresence>
+              {menuOpen && (
+                <motion.nav
+                  id="mobile-nav"
+                  className="mobile-nav"
+                  aria-label="Mobile"
+                  initial={{ opacity: 0, y: -12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.22 }}
+                >
+                  {navLinks.map(l => (
+                    <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</a>
+                  ))}
+                </motion.nav>
+              )}
+            </AnimatePresence>
+          </div>
         </header>
 
         {/* ══ HERO ══ */}

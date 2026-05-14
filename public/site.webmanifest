@@ -1,0 +1,15 @@
+{
+  "name": "Mohamed Aadhil — Software Engineer",
+  "short_name": "Aadhil",
+  "description": "Mohamed Aadhil — Software Engineer & Full-Stack Developer portfolio.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

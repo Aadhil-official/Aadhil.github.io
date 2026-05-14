@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aadhil-official.github.io/Aadhil.github.io/sitemap.xml
