@@ -33,6 +33,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-scroll-parallax": "^3.4.5",
     "react-typing-effect": "^2.0.5",
+    "three": "^0.184.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
