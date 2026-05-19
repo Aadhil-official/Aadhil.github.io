@@ -678,7 +678,7 @@ function App() {
               <div className="hero-stats">
                 {[
                   { value: '6+', label: 'Projects' },
-                  { value: '3.45', label: 'CGPA' },
+                  { value: '3.31', label: 'CGPA' },
                   { value: '5+', label: 'Months Exp.' },
                 ].map((s) => (
                   <div key={s.label} className="hero-stat-chip">
@@ -723,7 +723,7 @@ function App() {
                   {[
                     { n: 6, s: '+', label: 'Projects Completed' },
                     { n: 5, s: '+', label: 'Months Experience' },
-                    { n: 3.45, s: '', label: 'CGPA', decimals: 2 },
+                    { n: 3.31, s: '', label: 'CGPA', decimals: 2 },
                   ].map(({ n, s, label, decimals }) => (
                     <div key={label} className="count-card">
                       <strong><CountUp end={n} suffix={s} decimals={decimals} /></strong>
