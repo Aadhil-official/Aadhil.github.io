@@ -17,7 +17,7 @@ const personal = {
   phone: '+94 750 213 273',
   location: 'Colombo, Sri Lanka',
   github: 'https://github.com/Aadhil-official',
-  linkedin: 'https://linkedin.com/in/mohamed-aadhil',
+  linkedin: 'https://www.linkedin.com/in/mohamed-aadhil-716645248',
   whatsapp: 'https://wa.me/+94750213273',
 };
 
