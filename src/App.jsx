@@ -6,9 +6,9 @@ import { Toaster } from 'react-hot-toast';
 import * as THREE from 'three';
 import profilePhoto from './assets/MyPic.png';
 import cvFile from './assets/CV.pdf';
-import { dismiss, error as showError, loading as showLoading, success } from './utils/toastify';
-import { useTheme } from './context/ThemeContext';
-import './styles/global.css';
+import { dismiss, error as showError, loading as showLoading, success } from './utils/Toastify';
+import { useTheme } from './Context/ThemeContext';
+import './Styles/global.css';
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 const personal = {
