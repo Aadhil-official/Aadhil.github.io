@@ -5,7 +5,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://aadhil-official.github.io/Aadhil.github.io/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -34,5 +34,5 @@
     <loc>https://aadhil-official.github.io/Aadhil.github.io/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url> -->
 </urlset>
